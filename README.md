@@ -39,7 +39,6 @@ sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-slam-too
 ## Build
 
 ```bash
-cd ~/ros2-navigation2_ws
 
 source /opt/ros/jazzy/setup.bash
 
@@ -55,7 +54,7 @@ source install/setup.bash
 Launch the ROSbot model in RViz.
 
 ```bash
-source ~/ros2-navigation2_ws/install/setup.bash
+source install/setup.bash
 
 ros2 launch rosbot_description display.launch.py
 ```
@@ -73,7 +72,7 @@ ros2 launch rosbot_description display.launch.py
 Launch the robot inside the Gazebo simulation environment.
 
 ```bash
-source ~/ros2-navigation2_ws/install/setup.bash
+source install/setup.bash
 
 ros2 launch rosbot_description gazebo.launch.py
 ```
@@ -192,12 +191,14 @@ The robot must autonomously visit multiple locations inside a hospital environme
   <img src="docs/images/map.png" width="700">
 </p>
 
-Navigation sequence:
+### Mission Flow
 
 1. Start position
-2. Medicine Shop
-3. Room 1
-4. Return to Initial Pose
+2. Navigate to Medicine Shop
+3. Collect medicine
+4. Navigate to Room 1
+5. Deliver medicine
+6. Return to initial position
 
 ---
 
@@ -262,19 +263,15 @@ https://github.com/user-attachments/assets/565b6487-86c9-47bc-9a04-d35003d8cbc9
 ## Repository Structure
 
 ```text
-src/
-├── rosbot_description
-├── rosbot_nav2_bringup
-├── nav2_client
-└── nav2_bt_client
+.
+├── docs
+│   ├── images
+│   └── videos
+├── src
+│   ├── rosbot_description
+│   ├── rosbot_nav2_bringup
+│   ├── nav2_client
+│   └── nav2_bt_client
+├── README.md
+└── .gitignore
 ```
-
-## Navigation Workflow
-
-1. Robot Model
-2. Simulation
-3. Mapping
-4. Localization
-5. Path Planning
-6. Autonomous Navigation
-7. Behavior Tree Task Execution

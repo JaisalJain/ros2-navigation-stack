@@ -241,7 +241,7 @@ This launches:
 
 ## Demo Video
 
-[▶ Watch BT Navigation Demo](docs/videos/bt_navigation.mp4)
+https://github.com/user-attachments/assets/565b6487-86c9-47bc-9a04-d35003d8cbc9
 
 ---
 
